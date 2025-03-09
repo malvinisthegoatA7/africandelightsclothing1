@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>African Delights Clothing</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      /* Add the background image */
+      background-image: url("https://api.deepai.org/job-view-file/16095baa-42d6-426b-b213-59f3a768c4ed/outputs/output.jpg");
+      background-size: cover; /* Or use 'contain' if you want to keep the image's aspect ratio */
+      background-repeat: no-repeat;
+    }
+
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+    }
+
+    .slideshow-container img {
+      width: 100%;
+      display: none;
+    }
+
+    .slideshow-container img.active {
+      display: block;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Style for the logo */
+    .logo {
+      text-align: center;
+      padding: 20px;
+      font-size: 2em;
+      font-weight: bold;
+      color: #fff; /* Example color, change as needed */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="logo">African Delights Clothing</div>
+
+  <div class="slideshow-container">
+    <img src="https://api.deepai.org/job-view-file/eb7448f9-bd77-4851-96c8-06a3f1d22ff8/outputs/output.jpg" class="active" alt="African Fashion 1">
+    </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slideshow-container img');
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].classList.add('active');
+      setTimeout(showSlides, 3000);
+    }
+
+    showSlides();
+  </script>
+
+  <div class="product-grid">
+    <div class="product">
+      <img src="images/product-1.jpg" alt="Ankara Dress">
+      <h3>Ankara Dress</h3>
+      <p>Beautiful vibrant ankara dress.</p>
+      <p>$50</p>
+      <button onclick="addToCart('Ankara Dress')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/product-2.jpg" alt="Agbada">
+      <h3>Agbada</h3>
+      <p>Traditional Agbada attire.</p>
+      <p>$150</p>
+      <button onclick="addToCart('Agbada')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/product-3.jpg" alt="Beaded Necklace">
+      <h3>Beaded Necklace</h3>
+      <p>Handmade beaded necklace.</p>
+      <p>$25</p>
+      <button onclick="addToCart('Beaded Necklace')">Add to Cart</button>
+    </div>
+  </div>
+
+  <script>
+    function addToCart(productName) {
+      alert(productName + " added to cart!");
+    }
+  </script>
+
+</body>
+</html>
